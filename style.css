@@ -145,6 +145,14 @@ section{scroll-margin-top:90px}
   background:linear-gradient(135deg,var(--cyan),var(--purple),var(--pink));
   box-shadow:0 0 45px rgba(0,229,255,.2)
 }
+.avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .profile-card h3{font-size:19px}
 .profile-card p{color:var(--muted);font-size:13px;margin:10px 0 22px}
 .status{display:inline-block;padding:8px 12px;border-radius:20px;background:rgba(0,200,83,.08);color:#00e676;font-size:10px;font-weight:900;letter-spacing:.8px}
