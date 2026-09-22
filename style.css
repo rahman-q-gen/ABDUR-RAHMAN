@@ -90,37 +90,7 @@ section{scroll-margin-top:90px}
 .glow-one{background:var(--cyan);left:-180px;top:100px}
 .glow-two{background:var(--pink);right:-180px;bottom:60px}
 .hero-inner{position:relative;z-index:2;max-width:1050px}
-.eyebrow {
-    display: inline-block;
-    color: #00e7ff;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-
-    animation: welcomeAnimation 2s ease-in-out infinite;
-}
-
-@keyframes welcomeAnimation {
-    0% {
-        opacity: 0.4;
-        transform: translateY(8px);
-        text-shadow: 0 0 0 transparent;
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-        text-shadow:
-            0 0 8px #00e7ff,
-            0 0 18px #00e7ff;
-    }
-
-    100% {
-        opacity: 0.4;
-        transform: translateY(-8px);
-        text-shadow: 0 0 0 transparent;
-    }
-}
+.eyebrow{color:var(--cyan);font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:22px}
 .hero h1{
   font-size:clamp(42px,8vw,92px);line-height:1.02;font-weight:950;letter-spacing:-2px;
   margin-bottom:22px;
