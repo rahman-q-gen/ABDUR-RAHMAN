@@ -33,7 +33,8 @@
     <div class="hero-glow glow-two"></div>
 
     <div class="hero-inner">
-      <div class="eyebrow" id="welcomeText"></div>
+        <div class="eyebrow" id="welcomeText"></div>
+    </div>
       
       <h1>MD. ABDUR <span>RAHMAN</span></h1>
       <p class="hero-role">IT Professional <b>|</b> Graphic Designer <b>|</b> Data Management Specialist</p>
@@ -213,38 +214,51 @@ const words = [
     "DIGITAL",
     "SPACE",
 
-"✦"
-];
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-const welcomeText = document.getElementById("welcomeText");
+    const welcomeText = document.getElementById("welcomeText");
 
-function animateWelcome() {
+    const words = [
+        "✦",
+        "WELCOME",
+        "TO",
+        "MY",
+        "DIGITAL",
+        "SPACE",
+        "✦"
+    ];
 
-    welcomeText.innerHTML = "";
+    function startAnimation() {
 
-    words.forEach((word, index) => {
+        welcomeText.innerHTML = "";
 
-        setTimeout(function () {
+        words.forEach(function(word, index) {
 
-            const span = document.createElement("span");
+            setTimeout(function() {
 
-            span.classList.add("word");
-            span.textContent = word;
+                const span = document.createElement("span");
 
-            welcomeText.appendChild(span);
+                span.className = "word";
+                span.textContent = word;
 
-        }, index * 450);
+                welcomeText.appendChild(span);
 
-    });
+            }, index * 500);
 
-    // সব শব্দ আসার পর ১ সেকেন্ড অপেক্ষা করে আবার শুরু
-    setTimeout(function () {
-        animateWelcome();
-    }, words.length * 450 + 1000);
-}
+        });
 
-animateWelcome();
+        // সব শব্দ আসার পর ১ সেকেন্ড অপেক্ষা
+        setTimeout(function() {
+            startAnimation();
+        }, (words.length * 500) + 1000);
+
+    }
+
+    startAnimation();
+
+});
 </script>
-
 </body>
 </html>
+
