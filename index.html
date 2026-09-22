@@ -204,5 +204,46 @@
   });
 </script>
 
+<script>
+const words = [
+    "✦",
+    "WELCOME",
+    "TO",
+    "MY",
+    "DIGITAL",
+    "SPACE",
+    "✦"
+];
+
+const welcomeText = document.getElementById("welcomeText");
+
+function animateWelcome() {
+
+    welcomeText.innerHTML = "";
+
+    words.forEach((word, index) => {
+
+        setTimeout(function () {
+
+            const span = document.createElement("span");
+
+            span.classList.add("word");
+            span.textContent = word;
+
+            welcomeText.appendChild(span);
+
+        }, index * 450);
+
+    });
+
+    // সব শব্দ আসার পর ১ সেকেন্ড অপেক্ষা করে আবার শুরু
+    setTimeout(function () {
+        animateWelcome();
+    }, words.length * 450 + 1000);
+}
+
+animateWelcome();
+</script>
+
 </body>
 </html>
