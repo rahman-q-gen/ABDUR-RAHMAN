@@ -205,60 +205,7 @@
   });
 </script>
 
-<script>
-const words = [
-    "✦",
-    "WELCOME",
-    "TO",
-    "MY",
-    "DIGITAL",
-    "SPACE",
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const welcomeText = document.getElementById("welcomeText");
-
-    const words = [
-        "✦",
-        "WELCOME",
-        "TO",
-        "MY",
-        "DIGITAL",
-        "SPACE",
-        "✦"
-    ];
-
-    function startAnimation() {
-
-        welcomeText.innerHTML = "";
-
-        words.forEach(function(word, index) {
-
-            setTimeout(function() {
-
-                const span = document.createElement("span");
-
-                span.className = "word";
-                span.textContent = word;
-
-                welcomeText.appendChild(span);
-
-            }, index * 500);
-
-        });
-
-        // সব শব্দ আসার পর ১ সেকেন্ড অপেক্ষা
-        setTimeout(function() {
-            startAnimation();
-        }, (words.length * 500) + 1000);
-
-    }
-
-    startAnimation();
-
-});
-</script>
 </body>
 </html>
 
