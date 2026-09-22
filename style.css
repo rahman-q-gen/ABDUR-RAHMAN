@@ -115,7 +115,6 @@ section{scroll-margin-top:90px}
         transform: translateY(0);
     }
 }
-
 .hero h1{
   font-size:clamp(42px,8vw,92px);line-height:1.02;font-weight:950;letter-spacing:-2px;
   margin-bottom:22px;
