@@ -90,31 +90,6 @@ section{scroll-margin-top:90px}
 .glow-one{background:var(--cyan);left:-180px;top:100px}
 .glow-two{background:var(--pink);right:-180px;bottom:60px}
 .hero-inner{position:relative;z-index:2;max-width:1050px}
-.eyebrow {
-    color: #00e7ff;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    min-height: 22px;
-}
-
-.word {
-    display: inline-block;
-    margin-right: 7px;
-    animation: wordShow 0.4s ease forwards;
-}
-
-@keyframes wordShow {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 .hero h1{
   font-size:clamp(42px,8vw,92px);line-height:1.02;font-weight:950;letter-spacing:-2px;
   margin-bottom:22px;
