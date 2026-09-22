@@ -1,4 +1,129 @@
+/* =========================================================
+   MD. ABDUR RAHMAN — PREMIUM PORTFOLIO
+========================================================= */
 
+:root{
+  --bg:#080b11;
+  --panel:#0e131c;
+  --panel2:#111827;
+  --text:#f8fafc;
+  --muted:#aab4c5;
+  --cyan:#00e5ff;
+  --blue:#2563eb;
+  --purple:#7c3aed;
+  --pink:#ff2d95;
+  --line:rgba(255,255,255,.09);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+section{scroll-margin-top:90px}
+
+/* NAVIGATION */
+.site-header{
+  position:sticky;top:0;z-index:9999;
+  background:rgba(8,11,17,.82);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.navbar{
+  max-width:1400px;margin:auto;min-height:74px;padding:12px 30px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{
+  font-weight:900;font-size:18px;letter-spacing:1px;white-space:nowrap;
+  background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple),var(--pink));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.nav-menu{display:flex;align-items:center;justify-content:flex-end;gap:22px}
+.nav-link{
+  position:relative;font-size:12px;font-weight:800;letter-spacing:.7px;padding:8px 2px;
+  color:#fff;transition:.25s;
+}
+.nav-link:after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;border-radius:20px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));transition:.25s;
+}
+.nav-link:hover,.nav-link.active{color:var(--cyan)}
+.nav-link:hover:after,.nav-link.active:after{width:100%}
+.cv-btn,.hire-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:39px;padding:0 15px;border-radius:8px;
+  font-size:11px;font-weight:900;letter-spacing:.6px;
+  border:1px solid rgba(255,255,255,.13);transition:.25s;
+}
+.cv-btn{
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  box-shadow:0 6px 20px rgba(37,99,235,.22);
+}
+.cv-btn:hover{transform:translateY(-2px);background:linear-gradient(135deg,var(--cyan),var(--blue))}
+.hire-btn{
+  background:linear-gradient(135deg,var(--pink),#e100ff,var(--purple));
+  box-shadow:0 6px 20px rgba(255,45,149,.22);
+}
+.hire-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 10px 28px rgba(255,45,149,.35)}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:25px;cursor:pointer}
+
+/* HERO */
+.hero{
+  min-height:680px;position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:100px 25px;
+  background:
+    radial-gradient(circle at 15% 25%,rgba(0,229,255,.12),transparent 32%),
+    radial-gradient(circle at 85% 25%,rgba(225,0,255,.13),transparent 32%),
+    linear-gradient(180deg,#0b1018,#080b11);
+}
+.hero:after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple),var(--pink));
+}
+.hero-glow{position:absolute;width:350px;height:350px;border-radius:50%;filter:blur(90px);opacity:.16}
+.glow-one{background:var(--cyan);left:-180px;top:100px}
+.glow-two{background:var(--pink);right:-180px;bottom:60px}
+.hero-inner{position:relative;z-index:2;max-width:1050px}
+.eyebrow{color:var(--cyan);font-size:13px;font-weight:800;letter-spacing:2px;margin-bottom:22px}
+.hero h1{
+  font-size:clamp(42px,8vw,92px);line-height:1.02;font-weight:950;letter-spacing:-2px;
+  margin-bottom:22px;
+}
+.hero h1 span{
+  background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple),var(--pink));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-role{font-size:clamp(14px,2vw,22px);color:#d7deea}
+.hero-role b{color:var(--pink);padding:0 5px}
+.hero-motto{margin-top:24px;color:#ffd600;font-size:16px;font-weight:800}
+.hero-motto span{color:var(--pink);padding:0 5px}
+.hero-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:35px}
+.primary-btn,.secondary-btn{
+  min-height:44px;padding:0 22px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:900;letter-spacing:.6px;transition:.25s
+}
+.primary-btn{background:linear-gradient(135deg,#00b8d4,var(--blue))}
+.secondary-btn{border:1px solid rgba(0,229,255,.5);background:rgba(0,229,255,.05)}
+.primary-btn:hover,.secondary-btn:hover{transform:translateY(-2px)}
+.hero-tags{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:35px}
+.hero-tags span{
+  font-size:9px;font-weight:900;letter-spacing:1px;padding:7px 11px;border-radius:5px;
+  border:1px solid var(--line);background:#101722
+}
+.hero-tags span:nth-child(1){color:#ff4ca7}.hero-tags span:nth-child(2){color:#b18cff}
+.hero-tags span:nth-child(3){color:var(--cyan)}.hero-tags span:nth-child(4){color:#00e676}
+
+/* SECTIONS */
+.section{max-width:1180px;margin:auto;padding:105px 30px;border-bottom:1px solid rgba(255,255,255,.055)}
+.section-head>span,.contact-inner>span{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:2px}
+.section-head h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:10px 0 18px}
+.section-head p{max-width:760px;color:var(--muted)}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1.45fr .75fr;gap:50px;align-items:center}
